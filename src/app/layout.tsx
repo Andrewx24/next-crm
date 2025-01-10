@@ -1,12 +1,12 @@
 import { Inter } from 'next/font/google'
 import { ApolloProvider } from "@apollo/client";
 import { client } from "@/lib/apollo-client";
-import { auth } from "@/auth"
+import  { auth } from "@/lib/auth";
 import { SessionProvider } from "next-auth/react"
 
 import "./globals.css"
-import { Sidebar } from "@/components/layout/sidebar"
-import { Header } from "@/components/layout/header"
+import { Sidebar } from '@/components/sidebar';
+import { Header } from '@/components/header';
 
 const inter = Inter({ subsets: ["latin"] })
 
