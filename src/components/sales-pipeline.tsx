@@ -1,5 +1,8 @@
+"use client"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
+import dynamic from 'next/dynamic'
 
 const data = [
   { stage: "Lead", value: 200 },
@@ -9,7 +12,7 @@ const data = [
   { stage: "Closed Won", value: 30 },
 ]
 
-export function SalesPipeline() {
+function SalesPipelineComponent() {
   return (
     <Card>
       <CardHeader>
@@ -28,3 +31,6 @@ export function SalesPipeline() {
   )
 }
 
+export default dynamic(() => Promise.resolve(SalesPipelineComponent), {
+  ssr: false
+})

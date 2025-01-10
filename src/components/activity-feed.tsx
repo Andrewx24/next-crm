@@ -24,7 +24,7 @@ const activities = [
   }
 ]
 
-export function ActivityFeed() {
+export  default function ActivityFeed() {
   return (
     <Card>
       <CardHeader>

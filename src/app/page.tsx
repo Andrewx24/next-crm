@@ -1,8 +1,8 @@
 import { Building2, Users, PieChart, Calendar, Quote, Trello } from 'lucide-react'
-import { StatCard } from "@/components/dashboard/stat-card"
-import { UpcomingEvents } from "@/components/dashboard/upcoming-events"
-import { ActivityFeed } from "@/components/dashboard/activity-feed"
-import { SalesPipeline } from "@/components/dashboard/sales-pipeline"
+import StatCard from '@/components/stat-card'
+import UpcomingEvents from '@/components/upcoming-events'
+import  ActivityFeed from '@/components/activity-feed'
+import SalesPipeline from '@/components/sales-pipeline'
 
 export default function DashboardPage() {
   return (

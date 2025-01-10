@@ -13,7 +13,7 @@ interface StatCardProps {
   className?: string
 }
 
-export function StatCard({ icon, title, value, change, trend, className }: StatCardProps) {
+export default function StatCard({ icon, title, value, change, trend, className }: StatCardProps) {
   const trendColor = {
     up: "text-green-600",
     down: "text-red-600",

@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
-import { ApolloProvider } from "@apollo/client";
-import { client } from "@/lib/apollo-client";
+
+import { ApolloWrapper } from '@/context/apollo-provider';
 import  { auth } from "@/lib/auth";
 import { SessionProvider } from "next-auth/react"
 
@@ -20,7 +20,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ApolloProvider client={client}>
+        <ApolloWrapper>
           <SessionProvider session={session}>
             {session ? (
               <div className="flex h-screen bg-gray-50">
@@ -36,7 +36,7 @@ export default async function RootLayout({
               children
             )}
           </SessionProvider>
-        </ApolloProvider>
+        </ApolloWrapper>
       </body>
     </html>
   )

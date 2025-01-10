@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { cn } from "@/lib/utils"
 
 const events = [
   {
@@ -23,7 +24,7 @@ const events = [
   }
 ]
 
-export function UpcomingEvents() {
+export default function UpcomingEvents() {
   return (
     <Card>
       <CardHeader>
