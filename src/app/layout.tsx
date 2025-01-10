@@ -19,6 +19,14 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+      <hed>
+      <script
+  defer
+  data-website-id="67818315ebaccf7afd593140"
+  data-domain="next-crm-flame.vercel.app"
+  src="https://datafa.st/js/script.js">
+</script>
+      </hed>
       <body className={inter.className}>
         <ApolloWrapper>
           <SessionProvider session={session}>
