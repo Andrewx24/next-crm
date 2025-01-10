@@ -3,8 +3,8 @@ import { ApolloWrapper } from '@/context/apollo-provider';
 import { auth } from "@/lib/auth";
 import { SessionProvider } from "next-auth/react";
 import "./globals.css";
-import { Sidebar } from '@/components/sidebar';
-import { Header } from '@/components/header';
+import Sidebar from '@/components/sidebar';
+import Header from '@/components/header';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +14,7 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   const session = await auth();
-
+  
   return (
     <html lang="en">
       <head>
@@ -29,9 +29,9 @@ export default async function RootLayout({
         <ApolloWrapper>
           <SessionProvider session={session}>
             {session ? (
-              <div className="flex h-screen bg-gray-50">
+              <div className="flex h-screen bg-gray-50 overflow-hidden">
                 <Sidebar />
-                <div className="flex-1 flex flex-col">
+                <div className="flex-1 flex flex-col min-h-0">
                   <Header />
                   <main className="flex-1 p-6 overflow-y-auto">
                     {children}
